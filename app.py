@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-BASE = Path(__file__).parent / "Nomic"
+BASE = Path(__file__).parent / "Nomic" / "v2_frozen"
 
 # ---- Load and merge data (cached so re-runs don't re-read CSVs) ----
 @st.cache_data
