@@ -4,22 +4,62 @@ __pycache__/
 .venv/
 venv/
 
-# 模型训练脚本和大文件（网页不需要）
-LSTNtopic.py
-llm_label_topics.py
-test.py
-experiment_clean.csv
-
-# 嵌入和模型中间产物
-Nomic/doc_embeddings.npy
-Nomic/topic_centroids.npy
-Nomic/topics_registry.json
-Nomic/llm_raw/
-Longformer/
-
-# 图片（可选，如果不想传）
-Nomic/*.png
-
-# IDE
+# IDE / 工具
 .vscode/
 .idea/
+.claude/
+
+# === 模型训练 / 数据处理脚本（含 API key 风险，网页不需要）===
+LSTNtopic.py
+LSTNtopic_v2.py
+llm_label_topics.py
+NPI.py
+bertopic_run.py
+extractandprocessing.py
+extractandprocessing_test.py
+keywordextract.py
+longformer_embedding.py
+merge_parameter.py
+nomic_embedding.py
+sectionextract.py
+test.py
+
+# === 原始 / 大 CSV（网页不需要）===
+experiment.csv
+experiment_clean.csv
+main_wsj_articles.csv
+wsj_news.csv
+monthly_counts.csv
+bybee_180_topic_details.csv
+regex_drop_authors.csv
+regex_drop_headlines.csv
+
+# === 辅助文件 ===
+keywords.txt
+sections.txt
+token_report.txt
+merge_parameter.log
+新建*.txt
+
+# === 模型 / 备份文件夹 ===
+bertopic_model/
+jofi13377-sup-0002-replicationcode/
+Longformer/
+
+# === Nomic/ 主目录下要屏蔽的中间产物 ===
+Nomic/doc_embeddings.npy
+Nomic/doc_embeddings_index.csv
+Nomic/topic_centroids.npy
+Nomic/topic_trajectories.csv
+Nomic/topic_junk_decisions.csv
+Nomic/topics_registry.json
+Nomic/llm_raw/
+Nomic/NPI/
+Nomic/*.png
+
+# === Nomic/v2_frozen/ 下：屏蔽中间产物，保留 3 个 CSV ===
+# 网页用 BASE = Nomic/v2_frozen，所以这三个 CSV 必须能被 git 看见。
+Nomic/v2_frozen/*.npy
+Nomic/v2_frozen/*.png
+Nomic/v2_frozen/*.json
+Nomic/v2_frozen/topic_trajectories.csv
