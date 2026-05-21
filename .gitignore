@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 模型训练脚本和大文件（网页不需要）
+LSTNtopic.py
+llm_label_topics.py
+test.py
+experiment_clean.csv
+
+# 嵌入和模型中间产物
+Nomic/doc_embeddings.npy
+Nomic/topic_centroids.npy
+Nomic/topics_registry.json
+Nomic/llm_raw/
+Longformer/
+
+# 图片（可选，如果不想传）
+Nomic/*.png
+
+# IDE
+.vscode/
+.idea/
