@@ -57,8 +57,16 @@ Nomic/llm_raw/
 Nomic/NPI/
 Nomic/*.png
 
-# === Nomic/v2_frozen/ 下：屏蔽中间产物，保留 3 个 CSV ===
-# 网页用 BASE = Nomic/v2_frozen，所以这三个 CSV 必须能被 git 看见。
+# === Nomic/v2_forzen2/ 下：屏蔽中间产物，保留网页/lookup 需要的 CSV ===
+# 网页用 BASE = Nomic/v2_forzen2，topic_attention / topic_llm_labels /
+# topic_top_words / outlier_stats 这几个 CSV 必须能被 git 看见。
+Nomic/v2_forzen2/*.npy
+Nomic/v2_forzen2/*.png
+Nomic/v2_forzen2/*.json
+Nomic/v2_forzen2/topic_trajectories.csv
+Nomic/v2_forzen2/doc_topic_assignments.csv
+
+# 旧 v2_frozen 文件夹的规则（如果还存在的话保留屏蔽）
 Nomic/v2_frozen/*.npy
 Nomic/v2_frozen/*.png
 Nomic/v2_frozen/*.json
